@@ -1,0 +1,15 @@
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.deps.json
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.runtimeconfig.json
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.runtimeconfig.dev.json
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.dll
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.pdb
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Domain.dll
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/bin/Debug/netcoreapp2.1/AnimalSpawn.Domain.pdb
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.csprojAssemblyReference.cache
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.AssemblyInfoInputs.cache
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.AssemblyInfo.cs
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.csproj.CoreCompileInputs.cache
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.csproj.CopyComplete
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.dll
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.pdb
+/home/hhhh/Documentos/Backups/Files/Tareas/AWOS/AnimalSwamp/AnimalSpawn.Infraestructure/obj/Debug/netcoreapp2.1/AnimalSpawn.Infraestructure.genruntimeconfig.cache
