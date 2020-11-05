@@ -13,7 +13,7 @@ namespace AnimalSpawn.Infraestructure.Data.Configurations
         {
             builder.Property(e => e.CaptureCondition)
             .HasMaxLength(500)
-            .IsUnicode(false);
+           .IsUnicode(false);
             builder.Property(e => e.CaptureDate).HasColumnType("datetime");
             builder.Property(e => e.CreateAt).HasColumnType("datetime");
             builder.Property(e => e.Description)

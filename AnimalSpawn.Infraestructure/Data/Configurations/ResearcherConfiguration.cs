@@ -7,8 +7,9 @@ using System.Text;
 
 namespace AnimalSpawn.Infraestructure.Data.Configurations
 {
-    public class ResearcherConfiguration : IEntityTypeConfiguration<Researcher>
+    class ResearcherConfiguration : IEntityTypeConfiguration<Researcher>
     {
+
         public void Configure(EntityTypeBuilder<Researcher> builder)
         {
             builder.Property(e => e.Address)

@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dl1iJGCwKOaIs1gaR0+gOXQEOPPPgsPeWPd6bLmCKSewr7mxg07eITPkqrWeg+n64dfSrE8dXaNEEV+1nw2DuA==",
+  "dgSpecHash": "C8KmU7z3hZgLgbdOUJPYWk+MgarA9e4DxczFK5QudxsB7HFnMNwYsxneRIHK/CbiHpAphQ5haTNtSltwNCzpXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Escritorio\\AnimalSpawn\\AnimalSpawn.Domain\\AnimalSpawn.Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\carlo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Missael Ching R&M\\Desktop\\4A.MJCM\\AnimalSpawn\\AnimalSpawn.Domain\\AnimalSpawn.Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

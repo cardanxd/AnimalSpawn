@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AnimalSpawn.Application.Repositories;
+using AnimalSpawn.Application.Services;
 using AnimalSpawn.Domain.Interfaces;
 using AnimalSpawn.Infraestructure.Data;
 using AnimalSpawn.Infraestructure.Repositories;
@@ -16,6 +18,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using AnimalSpawn.Infraestructure.Filters;
+
 
 namespace AnimalSpawn.Api
 {
@@ -31,21 +35,20 @@ namespace AnimalSpawn.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-            services.AddDbContext<AnimalSpawnContext>(
-                option =>
-                {
-                    option.UseSqlServer(Configuration.GetConnectionString("EFDbConnection"));
-                }
+            services.AddControllers();
+            services.AddDbContext<AnimalSpawnContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("AnimalSpawnConnection"))
             );
-            services.AddTransient<IAnimalRepository, AnimalRepository>();
             services.AddMvc().AddFluentValidation(options =>
-            {
-                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
-            }
-            );
+            options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+            services.AddControllers(options =>
+            options.Filters.Add<GlobalExceptionFilter>());
+            services.AddTransient<IAnimalService, AnimalService>();
+            services.AddScoped(typeof(IRepository<>), typeof(SQLRepository<>));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

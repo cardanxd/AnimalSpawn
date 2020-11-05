@@ -7,11 +7,12 @@ using System.Text;
 
 namespace AnimalSpawn.Infraestructure.Data.Configurations
 {
-    public class ProtectedAreaConfiguration : IEntityTypeConfiguration<ProtectedArea>
+   public class ProtectedAreaConfiguration : IEntityTypeConfiguration<ProtectedArea>
     {
+
         public void Configure(EntityTypeBuilder<ProtectedArea> builder)
         {
-            builder.Property(e => e.Area).HasColumnType("decimal(10, 0)");
+            builder.Property(e => e.Area).HasColumnType("decimal(10, 2)");
 
             builder.Property(e => e.CreateAt).HasColumnType("datetime");
 
@@ -32,6 +33,8 @@ namespace AnimalSpawn.Infraestructure.Data.Configurations
                 .HasForeignKey(d => d.CountryId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ProtectedArea_0");
+
         }
+
     }
 }
