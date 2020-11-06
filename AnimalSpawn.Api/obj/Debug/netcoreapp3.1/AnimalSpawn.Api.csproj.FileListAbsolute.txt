@@ -69,5 +69,3 @@ C:\Users\missa\source\repos\AnimalSpawn\AnimalSpawn.Api\bin\Debug\netcoreapp3.1\
 C:\Users\missa\source\repos\AnimalSpawn\AnimalSpawn.Api\obj\Debug\netcoreapp3.1\AnimalSpawn.Api.csproj.CoreCompileInputs.cache
 C:\Users\missa\source\repos\AnimalSpawn\AnimalSpawn.Api\obj\Debug\netcoreapp3.1\AnimalSpawn.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\missa\source\repos\AnimalSpawn\AnimalSpawn.Api\obj\Debug\netcoreapp3.1\AnimalSpawn.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\Home\4A\4A.MJCM-main\AnimalSpawn\AnimalSpawn.Api\obj\Debug\netcoreapp3.1\AnimalSpawn.Api.dll
-D:\Home\4A\4A.MJCM-main\AnimalSpawn\AnimalSpawn.Api\obj\Debug\netcoreapp3.1\AnimalSpawn.Api.pdb
