@@ -12,6 +12,5 @@ namespace AnimalSpawn.Api.Responses
             Data = data;
         }
         public T Data { get; private set; }
-
     }
 }

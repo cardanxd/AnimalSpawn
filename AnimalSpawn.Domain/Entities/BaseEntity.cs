@@ -5,8 +5,8 @@ using System.Text;
 
 namespace AnimalSpawn.Domain.Entities
 {
-    public abstract class BaseEntity : IEntity
-    {
+	public class BaseEntity : IEntity
+	{
         public int Id { get; set; }
         public bool Status { get; set; }
         public DateTime CreateAt { get; set; }

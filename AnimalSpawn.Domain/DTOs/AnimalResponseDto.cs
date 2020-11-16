@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AnimalSpawn.Domain.DTOs
 {
-    public class AnimalResponseDto
+    public  class AnimalResponseDto
     {
         public int Id { get; set; }
         public int SpeciesId { get; set; }

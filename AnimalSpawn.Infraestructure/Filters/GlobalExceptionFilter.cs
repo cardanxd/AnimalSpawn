@@ -13,9 +13,9 @@ namespace AnimalSpawn.Infraestructure.Filters
         public void OnException(ExceptionContext context)
         {
             var eType = context.Exception.GetType();
-            if (eType == typeof(BusinessException))
+            if (eType == typeof(BusinessExceptions))
             {
-                var exception = (BusinessException)context.Exception;
+                var exception = (BusinessExceptions)context.Exception;
                 var validation = new
                 {
                     Status = 400,
@@ -29,8 +29,8 @@ namespace AnimalSpawn.Infraestructure.Filters
                 context.Result = new BadRequestObjectResult(json);
                 context.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 context.ExceptionHandled = true;
+
             }
         }
     }
 }
-

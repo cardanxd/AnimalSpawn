@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AnimalSpawn.Domain.Entities;
+﻿using AnimalSpawn.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace AnimalSpawn.Infraestructure.Data.Configurations
 {
-    class SpeciesConfiguration : IEntityTypeConfiguration<Species>
+    public class SpeciesConfiguration : IEntityTypeConfiguration<Species>
     {
-
         public void Configure(EntityTypeBuilder<Species> builder)
         {
             builder.Property(e => e.Code)
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
+                   .HasMaxLength(10)
+                   .IsUnicode(false);
 
             builder.Property(e => e.CommonName)
                 .HasMaxLength(200)

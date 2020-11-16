@@ -1,20 +1,14 @@
 ﻿using AnimalSpawn.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AnimalSpawn.Infraestructure.Data.Configurations
 {
-    class RfidTagConfiguration : IEntityTypeConfiguration<RfidTag>
+    public class RfidTagConfiguration : IEntityTypeConfiguration<RfidTag>
     {
-
         public void Configure(EntityTypeBuilder<RfidTag> builder)
         {
-            
-
-            builder.ToTable("RFIdTag");
+            builder.ToTable("RFIdTag", "dbo");
 
             builder.Property(e => e.Id).ValueGeneratedNever();
 

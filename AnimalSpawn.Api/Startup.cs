@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AnimalSpawn.Application.Repositories;
-using AnimalSpawn.Application.Services;
+using AnimalSapwn.Application.Services;
 using AnimalSpawn.Domain.Interfaces;
 using AnimalSpawn.Infraestructure.Data;
+using AnimalSpawn.Infraestructure.Filters;
 using AnimalSpawn.Infraestructure.Repositories;
 using AutoMapper;
 using FluentValidation.AspNetCore;
@@ -18,8 +18,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using AnimalSpawn.Infraestructure.Filters;
-
 
 namespace AnimalSpawn.Api
 {
@@ -38,17 +36,15 @@ namespace AnimalSpawn.Api
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
             services.AddDbContext<AnimalSpawnContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("AnimalSpawnConnection"))
-            );
-            services.AddMvc().AddFluentValidation(options =>
-            options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
-            services.AddControllers(options =>
-            options.Filters.Add<GlobalExceptionFilter>());
-            services.AddTransient<IAnimalService, AnimalService>();
+                options.UseSqlServer(Configuration.GetConnectionString("AnimalSpawnEF")));
+            //services.AddTransient<IAnimalRepository, AnimalRepository >();
+            services.AddTransient<IAnimalServices, AnimalService >();
             services.AddScoped(typeof(IRepository<>), typeof(SQLRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-
+            services.AddMvc().AddFluentValidation(options =>
+                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+            services.AddControllers(options => options.Filters.Add<GlobalExceptionFilter>()   
+);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

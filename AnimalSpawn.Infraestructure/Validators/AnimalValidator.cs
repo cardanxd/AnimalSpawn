@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AnimalSpawn.Infraestructure.Validators
 {
-   public class AnimalValidator : AbstractValidator<AnimalRequestDto>
+    public class AnimalValidator : AbstractValidator<AnimalRequestDto>
     {
         public AnimalValidator()
         {
@@ -19,6 +19,5 @@ namespace AnimalSpawn.Infraestructure.Validators
             .NotNull()
             .Length(4, 200);
         }
-
     }
 }

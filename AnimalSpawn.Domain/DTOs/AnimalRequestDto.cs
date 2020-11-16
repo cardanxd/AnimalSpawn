@@ -6,9 +6,6 @@ namespace AnimalSpawn.Domain.DTOs
 {
     public class AnimalRequestDto
     {
-        public string RfidTag { get; set; }
-        public DateTime DateEstablished { get; set; }
-        public int ProtectedAreaId { get; set; }
         public int SpeciesId { get; set; }
         public int FamilyId { get; set; }
         public int GenusId { get; set; }
@@ -20,6 +17,9 @@ namespace AnimalSpawn.Domain.DTOs
         public float Weight { get; set; }
         public float Height { get; set; }
         public int EstimatedAge { get; set; }
-    }
+        public string RfidTag { get; set; }
+        public DateTime DateEstablished { get; set; }
+        public int ProtectedAreaId { get; set; }
 
+    }
 }

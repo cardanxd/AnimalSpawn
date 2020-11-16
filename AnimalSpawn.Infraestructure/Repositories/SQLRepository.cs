@@ -11,48 +11,52 @@ using System.Threading.Tasks;
 
 namespace AnimalSpawn.Infraestructure.Repositories
 {
-    public class SQLRepository<T> : IRepository<T> where T : BaseEntity
-    {
-        private readonly AnimalSpawnContext _context;
-        private readonly DbSet<T> _entity;
-        public SQLRepository(AnimalSpawnContext context)
-        {
-            this._context = context;
-            this._entity = context.Set<T>();
-        }
-        public async Task Add(T entity)
-        {
-            if (entity == null) throw new ArgumentNullException("Entity");
-            _entity.Add(entity);
-            await _context.SaveChangesAsync();
-        }
-        public async Task Delete(int id)
-        {
-            if (id <= 0) throw new ArgumentNullException("Entity");
-            var entity = await GetById(id);
-            _entity.Remove(entity);
-        }
+	public class SQLRepository<T> : IRepository<T> where T : BaseEntity
+	{
+		private readonly AnimalSpawnContext _context;
+		private readonly DbSet<T> _entities;
+		public SQLRepository(AnimalSpawnContext context)
+		{
+			_context = context;
+			_entities = context.Set<T>();
+		}
 
-        public void Update(T entity)
-        {
-            if (entity == null) throw new ArgumentNullException("Entity");
-            if (entity.Id <= 0) throw new ArgumentNullException("Entity");
-            _entity.Update(entity);
-        }
+		public async Task Add(T entity)
+		{
+			if (entity == null) throw new ArgumentNullException("Entity");
+			await _entities.AddAsync(entity);
+		}
 
-        public IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression)
-        {
-            return _entity.Where(expression).AsNoTracking().AsEnumerable();
-        }
-        public IEnumerable<T> GetAll()
-        {
-            return _entity.AsNoTracking().AsEnumerable();
-        }
-        public async Task<T> GetById(int id)
-        {
-            return await _entity.AsNoTracking().SingleOrDefaultAsync(entity => entity.Id == id);
-        }
-       
-    }
+		public async Task Delete(int id)
+		{
+			if (id <= 0) throw new ArgumentNullException("Entity");
+			var entity = await GetById(id);
+			_entities.Remove(entity);
+		}
 
+		public IEnumerable<T> FindByCondition(Expression<Func<T, bool>> expression)
+		{
+			return _entities.Where(expression).AsNoTracking().AsEnumerable();
+		}
+
+		public IEnumerable<T> GetAll()
+		{
+			return _entities.AsNoTracking().AsEnumerable();
+
+		}
+
+		public async Task<T> GetById(int id)
+		{
+			return await _entities.AsNoTracking().SingleOrDefaultAsync(entity => entity.Id == id);
+		}
+
+		public void Update(T entity)
+		{
+			if (entity == null) throw new ArgumentNullException("Entity");
+			if (entity.Id <= 0) throw new ArgumentNullException("Entity");
+			_entities.Update(entity);
+		}
+
+		
+	}
 }

@@ -1,15 +1,11 @@
 ﻿using AnimalSpawn.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AnimalSpawn.Infraestructure.Data.Configurations
 {
-    public class PhotoConfiguration: IEntityTypeConfiguration<Photo>
+    public class PhotoConfiguration : IEntityTypeConfiguration<Photo>
     {
-
         public void Configure(EntityTypeBuilder<Photo> builder)
         {
             builder.Property(e => e.CreateAt).HasColumnType("datetime");
@@ -31,7 +27,6 @@ namespace AnimalSpawn.Infraestructure.Data.Configurations
                 .HasForeignKey(d => d.AnimalId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Photo_0");
-
         }
     }
 }
